@@ -25,10 +25,9 @@ PERSON_TO_IMPERSONATE = 'user'  # put a name here from your own data
 BIGRAM_FILE = 'bigrams.json'
 
 def run_once():
-    # uncomment to build bigrams for the first time and export to a json file
-    # bigram_builder.process_slack_export(SLACK_EXPORT_DIRECTORY, BIGRAM_FILE)
-
-    # subsequent runs can just use pre-processed bigrams file
+    # subsequent runs can just use post-processed bigrams file, so after
+    # first run comment this out:
+    bigrams.process_slack_export(SLACK_EXPORT_DIRECTORY, BIGRAM_FILE)
 
     icon_url = secrets.ICONS.get(PERSON_TO_IMPERSONATE)
     client = slack.Client(

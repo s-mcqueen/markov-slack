@@ -14,7 +14,6 @@ def process_slack_export(slack_export_dir, bigram_file):
 
 
 # Note that a major weakness of this approach is that bigrams data must fit into memory
-# ¯\_(ツ)_/¯
 class BiGramBuilder(object):
 
     def __init__(self, slack_export_dir):
@@ -32,7 +31,7 @@ class BiGramBuilder(object):
             files = ['{}{}'.format(file_path, f) for f in files if f]
             all_files_to_parse.extend(files)
 
-        # Process each message individually and put it into an in-mempory hash
+        # Process each message individually and put it into an in-memory hash
         for file in all_files_to_parse:
             with open(file) as convo_json:
                 convo_data = json.load(convo_json)
