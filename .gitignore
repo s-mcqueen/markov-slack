@@ -1,3 +1,13 @@
+# Custom:
+
+# this has our slack api key in it
+secrets.py
+# this has our ENTIRE SLACK HISTORY in it, do NOT accidentally share
+slack_export/
+*.json
+
+# Github standard for python repos:
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
